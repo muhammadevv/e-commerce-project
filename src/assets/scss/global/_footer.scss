@@ -1,0 +1,70 @@
+.footer {
+  margin-top: 20px;
+  background-color: $white;
+
+  &-wrapper{
+    @include flex(center, space-between)
+  }
+
+  &-box{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 137%;
+    color: $dark;
+    margin-bottom: 10px;
+  }
+
+  &-link{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: $gray-500;
+
+    @include hover(){
+      &:hover{
+        color: $primary;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-logo{
+    width: 276px;
+    height: 157px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__text{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: $gray-600;
+    }
+
+    &__social{
+      display: flex;
+      column-gap: 10px;
+
+      &__icon{
+
+        @include hover(){
+          & svg:hover path{
+            cursor: pointer;
+            fill: $primary;
+          }
+        }
+      }
+    }
+  }
+  &-google-play{
+    margin-top: 8px;
+  }
+}

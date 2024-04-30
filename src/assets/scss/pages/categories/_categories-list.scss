@@ -1,0 +1,140 @@
+.category {
+
+
+  &-list {
+    width: 100%;
+    height: 230px;
+    padding: 20px;
+    background-color: $white;
+    border: 1px solid $gray-300;
+    border-radius: 6px;
+    display: flex;
+    column-gap: 24px;
+
+    &__content {
+      width: 100%;
+    }
+
+    &__button {
+      font-family: $main-font;
+      font-weight: 500;
+      font-size: 16px;
+      color: $primary;
+      margin-top: 8px;
+    }
+
+    &__image {
+      width: 184px;
+      height: 184px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__title {
+      font-family: $main-font;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 137%;
+      color: $dark;
+      margin-bottom: 12px;
+      @include flex(center, space-between);
+
+      button {
+        border: 1px solid $gray-300;
+        border-radius: 6px;
+        width: 40px;
+        height: 40px;
+        @include center();  
+      }
+    }
+
+    &__subtitle {
+      font-family: $main-font;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: $gray-600;
+    }
+
+    &__price {
+
+      &__new {
+        font-family: $main-font;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        color: $dark;
+        margin-right: 20px;
+      }
+
+      &__old {
+        font-family: $main-font;
+        font-weight: 600;
+        font-size: 16px;
+        text-decoration: line-through;
+        color: $gray-500;
+        margin-bottom: 4px;
+      }
+    }
+
+    &__row {
+      display: flex;
+      margin-bottom: 14px;
+
+      &__text {
+        font-weight: 400;
+        font-size: 16px;
+        color: #787a80;
+      }
+
+      &__col {
+        position: relative;
+
+        &:not(:last-child) {
+          padding-right: 20px;
+          margin-right: 12px;
+
+          &::after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: #dbdbdb;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            border-radius: 50%;
+            transform: translate(0, -50%);
+          }
+        }
+      }
+    }
+
+    &__star {
+      &:not(:last-child) {
+        path {
+          fill: $orange;
+        }
+      }
+
+      &s {
+        &__title {
+          font-weight: 400;
+          font-size: 16px;
+          color: $orange;
+        }
+      }
+    }
+
+    &__stars,
+    &__row__col {
+      @include flex(center, unset);
+      column-gap: 8px;
+    }
+  }
+}

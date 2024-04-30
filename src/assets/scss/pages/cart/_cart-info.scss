@@ -1,0 +1,68 @@
+.cart-info {
+    width: 280px;
+    border-radius: 6px;
+    border: 1px solid $gray-300;
+    box-shadow: 0 4px 10px 0 rgba(56, 56, 56, 0.1);
+    background-color: $white;
+    padding: 20px 16px;
+
+    &__row{
+        @include flex(center, space-between);
+        margin-bottom: 6px;
+
+    }
+
+    &__text{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: -0.01em;
+        color: $gray-500;
+
+        &_black{
+            font-weight: 600;
+            color: $dark;
+        }
+
+    }
+
+    &__price{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: -0.01em;
+        color: $gray-600;
+
+        &_red{
+            color: $red;
+        }
+
+
+        &_black{
+            font-weight: 600;
+            color: $dark;
+        }
+    }
+
+    &__button{
+        width: 100%;
+        padding: 16px;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        color: $white;
+        border-radius: 8px;
+        margin-top: 20px;
+        background-color: $green;
+        border: 1px solid $green;
+        @include trn();
+
+        @include hover(){
+            &:hover{
+                background-color: $white;
+                color: $green;
+            }
+        }
+    }
+
+}

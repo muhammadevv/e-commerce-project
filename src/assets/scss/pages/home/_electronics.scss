@@ -1,0 +1,117 @@
+.electronics {
+  margin-top: 20px;
+  overflow: hidden;
+
+  &-wrapper {
+    border-radius: 6px;
+    background-color: $white;
+    border: 1px solid $gray-300;
+    display: flex;
+    column-gap: 1px;
+    height: 257px;
+  }
+
+  &-content {
+    width: 280px;
+    padding: 20px;
+    position: relative;
+
+    &__image {
+      background-color: #FFE0B0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      img {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__title {
+      position: relative;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: $dark;
+    }
+
+    &__button {
+      position: relative;
+      background-color: $white;
+      border: 1px solid $gray-100;
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin-top: 20px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      @include trn();
+
+      @include hover() {
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &-products {
+    width: calc(100% - 280px);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  &-product {
+    width: 224px;
+    height: 128px;
+    padding: 20px 16px;
+    position: relative;
+    border-left: 1px solid $gray-300;
+    border-bottom: 1px solid $gray-300;
+    
+    &:nth-child(1){
+      border-left: none;
+      border-bottom: 1px solid $gray-300;
+    }
+
+    
+    &:nth-child(5){
+      border-left: none;
+      border-bottom: 1px solid $gray-300;
+    }
+    &__title {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 120%;
+    }
+    
+    &__price {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 130%;
+      color: $gray-500;
+      margin-top: 8px;
+    }
+
+    &__image{
+      width: 75px;
+      height: 75px;
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

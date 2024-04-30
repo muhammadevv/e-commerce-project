@@ -1,0 +1,42 @@
+.product-related{
+  margin: 20px 0 40px 0;
+
+  &__wrapper{
+    padding: 20px;
+    border-radius: 6px;
+    background-color: $white;
+    border: 1px solid $gray-300;
+  }
+
+  &__products{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__product{
+    width: 172px;
+    height: 254px;
+  
+    &__image{
+      width: 172px;
+      height: 172px;
+      border-radius: 6px;
+      background-color: #eee;
+      @include center()
+    }
+  }
+  
+  &__product__text__name{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    margin-top: 14px;
+  }
+  &__product__text__price{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    margin-top: 8px;
+  }
+}

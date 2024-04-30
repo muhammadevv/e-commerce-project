@@ -1,0 +1,49 @@
+.category {
+
+  &-filter {
+    width: 240px;
+    margin-top: 24px;
+  }
+
+  &-sections {
+    border-top: 1px solid $gray-300;
+  }
+
+  &-section {
+
+    &__title {
+      font-family: $main-font;
+      font-weight: 600;
+      font-size: 16px;
+      color: $dark;
+      padding: 14px 0;
+    }
+
+    &__subtitle {
+      font-family: $main-font;
+      font-weight: 400;
+      font-size: 16px;
+      color: $gray-600;
+      padding: 0 9px 11px 8px;
+    }
+
+    &__button{
+      color: $primary;
+      font-weight: 400;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    &__checkbox{
+      margin-right: 13px;
+      width: 18px;
+      height: 18px;
+    }
+    
+    &__radio{
+      margin-right: 13px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
